@@ -1,0 +1,11 @@
+<view class='match_bg'>
+    <view class='title_cha'>一键约爱</view>
+    <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back_white.png'></image>
+    </view>
+    <button class='mat_but'></button>
+    <view class='mat_cent' bindtap='akeyLove'>
+        <image src='../../images/btn_pipei.png'></image>
+    </view>
+    <text class='mat_text'>来这里·遇到她</text> 
+</view>

@@ -1,0 +1,44 @@
+<!--pages/systemNews/systemNews.wxml-->
+<view class='cha-bg'>
+    <view class='title_news'>
+      <text class='title_cha'>{{user_name}}</text>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+      </view>
+    </view>
+    <!-- 消息显示区域 -->
+    <scroll-view scroll-y='true' class='{{view?"cha_shownews":"cha_shownews_top"}}' scroll-into-view="{{toView}}"  scroll-top="{{scrollTop}}" style='' bindtap="hideGiftUl" bindscrolltoupper='dropDown'>
+        <block wx:for-items="{{news_lists}}">
+            <view wx:if="{{item.type == 'message.gift'}}">
+                <!-- 时间 -->
+                <view class="time"><text>{{item.time}}</text></view>
+                <view class='ne_ul'>
+                    <view class='ne_li_avatar0' bindtap="jumpToMyPage" id='{{item.from_info.id}}'>
+                        <image src='{{item.from_info.avatar}}'></image>
+                    </view>
+                    <view class='ne_li_gift0'>
+                        <view class='ne_li_giftimage0'><image src='{{item.data.gift.gifticon}}'></image></view>
+                        <view class='clear'></view>
+                        <text>对方送你{{item.data.gift.giftname}} X {{item.data.gift.giftnum}}</text>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{item.type == 'message.closeVideo'}}">
+                <view class="time"><text>{{item.time}}</text></view>
+                <view class='ne_ul'>
+                    <image class="avatar" src="{{item.from_info.avatar}}"  bindtap="jumpToMyPage"/>
+                    <view class='ne_li_text0'>{{item.data.text}}</view>
+                </view>
+            </view>
+            <view wx:if="{{item.type == 'message.text'}}">
+                <view class="time"><text>{{item.time}}</text></view>
+                <view class='ne_ul'>
+                    <image class="avatar" src="{{item.from_info.avatar}}"  bindtap="jumpToMyPage"/>
+                    <view class='ne_li_text0'>{{item.data.text}}</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view >
+</view>
+
+

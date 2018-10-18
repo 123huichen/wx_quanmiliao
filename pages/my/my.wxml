@@ -1,0 +1,81 @@
+<import src="../../connemt/tabBar"/>
+<view class='container'>
+    <!-- <view class='title_home'>我的</view> -->
+    
+    <!-- 个人中心背景 -->
+    <view class='my-top-bg'></view>
+    <view class='my-top-infor'>
+        <view class='my-top-infor-rel'>
+          <!-- 头像 -->
+          <view class='my-avatar'><image src='{{avatar}}'></image></view>
+          <view class='my-name'>
+            <view>{{nickname}}</view>
+            <view class='gotoApp'>编辑个人信息请前往猎艳APP<image class='arrow_icon' src='../../image/gotoapp-icon.png'></image></view>
+          </view>
+          <!-- 不是会员 -->
+          <view class='my-vip' wx-if='{{VIP == 0}}'>
+            <image src='../../image/vip_0.png'></image>
+          </view>
+          <!-- 是会员 -->
+          <view class='my-vip' wx-if='{{VIP == 1}}'>
+            <image src='../../image/vip_1.png'></image>
+          </view>
+        </view>
+    </view> 
+
+    <!-- 头像 -->
+    <!-- <view class='avatar'>
+         <image  mode='aspectFill' src='{{avatar}}'></image>
+         
+          <view class='vip_ava' wx-if='{{vip_level == 0}}'><image src=''></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 1}}'><image src='../../images/icon_vip_1.png'></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 2}}'><image src='../../images/icon_vip_2.png'></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 3}}'><image src='../../images/icon_vip_3.png'></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 4}}'><image src='../../images/icon_vip_4.png'></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 5}}'><image src='../../images/icon_vip_5.png'></image></view>
+         <view class='vip_ava' wx-if='{{vip_level == 6}}'><image src='../../images/icon_vip_6.png'></image></view> 
+    </view> -->
+    <view class='my_ul'>
+         <view class='my_li' bindtap="jumpToRecharge">
+             <view class='my_li_img'><image src='../../image/clock.png'></image></view>
+             <text class='my_li_text'>金币余额  {{myGold}}</text>
+             <text class='my_li_gold'>去充值</text>
+         </view>
+         <view class='my_li' bindtap="jumpToVip">
+            <view class='my_li_img'><image src='../../image/vip_iocn.png'></image></view>
+            <text class='my_li_text'>我的VIP</text>
+         </view>
+         <view class='activity-li' bindtap="showDialogBtn">
+             <!-- <view class='my_li_img'><image src='../../image/icon_meet.png'></image></view>
+            <text class='my_li_text'>分享有礼</text>  -->
+            <view class='activity'>
+               <!-- <view class='cashback'>最高返现</view>
+               <view class='activity_text'>轻轻松松月入几万</view> -->
+            </view>
+         </view>
+         <view class='my_li' bindtap='onlineService'>
+            <view class='my_li_img'><image src='../../image/cust_serv.png'></image></view>
+            <text class='my_li_text'>在线客服</text>
+            <button class='my_li_but' open-type="share"></button>
+         </view>
+         
+    </view>
+    <!-- 遮罩层 -->
+    <!-- <cover-view class='pop-ups-bg' wx:if="{{showModal}}"> -->
+        <!-- 弹窗 -->
+        <!-- <view class='pop-ups'>
+            <view class='modal-title'>APP内方可查看详情</view>
+            <view class='modal-title-vice'>下载APP</view>
+            <view class='modal-footer'>
+                <view class='btn-cancel' bindtap='onCancel' data-status='cancel'>取消</view>
+                <view class='btn-confirm' bindtap='onConfirm' data-status='confirm'>确定</view>
+            </view>
+        </view>
+    </cover-view>    -->
+    <!-- 弹窗结束 --> 
+    <!-- <view class='download_img'>
+        <image src='../../images/btn_home_download.png'></image>
+    </view> -->
+
+    <!-- <template is='tabbar'></template>  -->
+</view>    

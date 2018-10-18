@@ -1,0 +1,140 @@
+/* pages/Invite/Invite.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url(http://static.yygo.tv/devqiniu/xiaochengxui/o_1cfu8id5u7uodvv1fhb7oea9ja.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+.title_news{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  font-size:34rpx;
+  height:65px;
+  line-height:85px;
+  color:#FEF8EC;
+  border-bottom:0rpx solid #DFDFDF;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 79rpx;
+  border-radius: 60rpx;
+  overflow: hidden
+}
+.name{
+  position: absolute;
+  left: 220rpx;
+  top: 154rpx;
+  color: #F9B846;
+  font-size: 32rpx;
+}
+.title{
+  position: absolute;
+  left: 220rpx;
+  top: 184rpx;
+  color: #F9D18A;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.avatar > image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.with_bg{
+  width: 628rpx;
+  height: 806rpx;
+  /* background-image: url(http://static.yygo.tv/devqiniu/xiaochengxui/o_1cf7aouipajva8n1s41q238ga.png);
+  background-repeat: no-repeat;
+  background-size: 100%; */
+  position: relative;
+  top: 30rpx;
+  margin: auto;
+}
+.canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 628rpx;
+  height: 806rpx;
+}
+.getinvi{
+  width: 282rpx;
+  height: 282rpx;
+  border-radius: 141rpx;
+  overflow: hidden;
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  margin-left: -141rpx;
+  background: #fff
+}
+.getinvi > image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.with_bg_text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 178rpx;
+  color: #FEF8EC;
+  font-size: 30rpx;
+}
+.with_bg_text1{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 128rpx;
+  color: #FEF8EC;
+  font-size: 26rpx;
+}
+.with_but{
+  width: 574rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 239rpx;
+  left: 50%;
+  margin-left: -287rpx;
+  background: #FCD08B;
+  line-height: 100rpx;
+  text-align: center;
+  color: #3E3425;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+}
+.with_but_text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 840rpx;
+  font-size: 26rpx;
+  color: #FEF8EC;
+}
+.but{
+  width: 510rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  border: 1rpx solid #FCD08B;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  left: 50%;
+  margin-left: -255rpx;
+}
+.download{
+  position: absolute;
+  bottom: 105rpx;
+  color: #FCD08B;
+}
+.select{
+  background: #FCD08B;
+  position: absolute;
+  bottom: 227rpx;
+  color: #333333;
+}

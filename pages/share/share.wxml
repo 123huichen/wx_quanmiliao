@@ -1,0 +1,66 @@
+<!--pages/share/share.wxml-->
+<view class='container'>
+    <view class='title_news'>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../image/icon_back.png'></image>
+      </view>
+      <text class='title_cha'>分享有礼</text>
+    </view>
+    <view class='recharge_top'>
+        <view class='recharge_top_morry'>可提现金额 （元）</view>
+        <view class='recharge_top_number'>{{commission}}</view>
+        <view class='recharge_top_but' bindtap='rechargeBut'>提现</view>
+        
+    </view>
+    <view class='show_number'>
+        <view wx-if='{{status}}'>
+            <view class='number'>已邀请{{num}}位好友</view>
+            <view class='receive_text'>邀请的{{num}}位好友成功注册免费赠送会员。</view>
+            <view class='receive_but'>
+                <text wx-if='{{num < 3}}' class='number_receive'>领取</text>
+                <text wx-if='{{num > 2}}' class='number_can_receive'>领取</text>
+        </view>
+        </view>
+        <view class='number_text '>获得被邀请人每笔充值 <text class='cashback'>20%</text> 现金返佣。</view>
+        <text bindtap='howMany' class='income'>收益明细</text>
+    </view>
+    <view class='invite_ul'>
+        <view class='invite_li'>
+            <view class='invite_li_text'>用户昵称</view>
+            <view class='invite_li_text'>时间</view>
+            <view class='invite_li_text'>状态</view>
+        </view>
+        <view wx-if='{{peoples !== ""}}'>
+            <block wx:for-items="{{peoples}}">
+                <view class='invite_li'>
+                    <view class='invite_li_text'>
+                        <view class='invite_li_img'><image src='{{item.avatar}}'></image></view>
+                    </view>
+                    <view class='invite_li_text'>{{item.create_at}}</view>
+                    <view class='invite_li_text'>{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+        <view class='invite_but'>
+            <!-- <button class='share_but' open-type="share">直接分享给朋友</button> -->
+            <view class='share_but' bindtap='savePhotos'>马上分享</view>
+        </view>
+    </view>
+
+    <!-- 弹窗 -->
+    <view class='mask' wx-if='{{Mask}}'>
+        <!-- 会员领取弹窗 -->
+        <view class='member_succ' wx-if='{{member_succ}}'>
+            <view class='member_succ_text'>会员领取成功</view>
+            <view class='member_succ_but' bindtap='cancelSuccBut'>知道了</view>
+        </view>
+        <!-- 提现弹窗 -->
+        <view class='member_succ' wx-if='{{withdraw}}'> 
+            <view class='member_succ_text'>提现请前往猎艳APP</view>
+            <view class='withdraw_but'>
+                <view class='but' bindtap='canceWithdraw'>取消</view>
+                <view class='withdraw but' bindtap='withdraw'>提现</view>
+            </view>
+        </view>
+    </view>
+</view>    

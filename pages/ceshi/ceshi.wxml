@@ -1,0 +1,4 @@
+<!--pages/ceshi/ceshi.wxml-->
+<view id="id" class = "ball" bindtap = "handletap" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend" style = "width : 100%px; height : 40px;">
+{{text}}
+</view>

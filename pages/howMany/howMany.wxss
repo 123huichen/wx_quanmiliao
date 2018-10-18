@@ -1,0 +1,35 @@
+/* pages/howMany/howMany.wxss */
+@import "../../connemt/tabBar";
+
+.many_ul{
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  overflow: hidden
+}
+.many_li{
+  width:718rpx;
+  margin-left:21rpx;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #DFDFDF;
+  font-size: 28rpx;
+  color: #555555;
+}
+.many_li_text{
+  color: #FD4F4F;
+  font-size: 24rpx;
+}
+.many_li_time{
+  text-align: right;
+  font-size: 20rpx;
+  color: #999999
+}
+.many_li_muny{
+  color: #333333;
+}

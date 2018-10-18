@@ -1,0 +1,97 @@
+<template name="tabbar">
+  <view class='tabbar'>
+    <view class='tabbar-but' bindtap='Jumptab' id='home'>
+      <view class='tabbar-icon'><image src='../../image/icon-home1.png'></image></view>
+      <text>首页</text>
+    </view>
+     <view class='tabbar-but' bindtap='Jumptab' id='live'>
+      <view class='tabbar-icon'><image src='../../image/icon_match.gif'></image></view>
+      <text>一键约爱</text>
+    </view> 
+    <view class='tabbar-but' bindtap='Jumptab' id='news'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_p_message1.png'></image></view>
+      <text>消息</text>
+    </view>
+    <view class='tabbar-but' bindtap='Jumptab' id='my'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_n_my1.png'></image></view>
+      <text>我的</text>
+    </view>
+  </view>
+  <!-- <view class='tabbar' wx-if='{{tabbarlive}}'>
+    <view class='tabbar-but' bindtap='Jumptab' id='home'>
+      <view class='tabbar-icon'><image src='../../image/icon-home1.png'></image></view>
+      <text class='text'>首页</text>
+    </view>
+     <view class='tabbar-but' bindtap='Jumptab' id='live'>
+      <view class='tabbar-icon'><image src='../../image/icon_match.gif'></image></view>
+      <text class='text'>一键约爱</text>
+    </view> 
+    <view class='tabbar-but' bindtap='Jumptab' id='news'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_p_message1.png'></image></view>
+      <text class='text'>消息</text>
+    </view>
+    <view class='tabbar-but' bindtap='Jumptab' id='my'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_n_my1.png'></image></view>
+      <text class='text'>我的</text>
+    </view>
+  </view>
+  <view class='tabbar' wx-if='{{tabbarnews}}'>
+    <view class='tabbar-but' bindtap='Jumptab' id='home'>
+      <view class='tabbar-icon'><image src='../../image/icon-home1.png'></image></view>
+      <text class='text'>首页</text>
+    </view>
+     <view class='tabbar-but' bindtap='Jumptab' id='live'>
+      <view class='tabbar-icon'><image src='../../image/icon_match.gif'></image></view>
+      <text class='text'>一键约爱</text>
+    </view> 
+    <view class='tabbar-but' bindtap='Jumptab' id='news'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_p_message1.png'></image></view>
+      <text class='text'>消息</text>
+    </view>
+    <view class='tabbar-but' bindtap='Jumptab' id='my'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_n_my1.png'></image></view>
+      <text class='text'>我的</text>
+    </view>
+  </view>
+  <view class='tabbar' wx-if='{{tabbarmy}}'>
+    <view class='tabbar-but' bindtap='Jumptab' id='home'>
+      <view class='tabbar-icon'><image src='../../image/icon-home1.png'></image></view>
+      <text class='text'>首页</text>
+    </view>
+     <view class='tabbar-but' bindtap='Jumptab' id='live'>
+      <view class='tabbar-icon'><image src='../../image/icon_match.gif'></image></view>
+      <text class='text'>一键约爱</text>
+    </view> 
+    <view class='tabbar-but' bindtap='Jumptab' id='news'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_p_message1.png'></image></view>
+      <text class='text'>消息</text>
+    </view>
+    <view class='tabbar-but' bindtap='Jumptab' id='my'>
+      <view class='tabbar-icon'><image src='../../image/icon_tab_n_my1.png'></image></view>
+      <text class='text'>我的</text>
+    </view>
+  </view> -->
+</template>
+
+
+<template name="PopUps">
+   <cover-view class='pop_ups'>
+      <cover-view class='pop_top'>温馨提示</cover-view>
+      <cover-view class='pop_text'>购买她的微信号需要支付XXXX金币</cover-view>
+      <cover-view class='pop_but_bot'>
+          <cover-view class='pop_but pop_quxiao'>取消</cover-view>
+          <cover-view class='pop_but pop_succ'>开通</cover-view>
+      </cover-view>
+   </cover-view>
+</template>
+
+
+
+<template name='news' >
+   <view class='title_news'>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+      </view>
+      <text class='title_cha'>{{user_name}}</text>
+   </view>
+</template>

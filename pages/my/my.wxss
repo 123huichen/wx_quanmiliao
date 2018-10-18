@@ -1,0 +1,237 @@
+@import "../../connemt/tabBar";
+/* pages/my/my.wxss */
+.container{
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  overflow:hidden;
+  background: #fff;
+  position: relative
+}
+.my-top-bg{
+  width: 100%;
+  height: 500rpx;
+  background-image: url('http://static.yygo.tv/devqiniu/xiaochengxui/o_1cf9fbhvbnnt3ppq3511tqnb5a.png');
+  background-size: 100%;
+  background-repeat: no-repeat
+}
+.my-top-infor{
+  width: 702rpx;
+  height: 190rpx;
+  position: absolute;
+  top: 367rpx;
+  left: 50%;
+  margin-left: -351rpx;
+  background-image: url(http://static.yygo.tv/Fakemedia/o_1cenjenqjm2k1rja15pf19bm1hdga.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.my-top-infor-rel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.my-avatar{
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  overflow: hidden;
+  margin-top: 41rpx;
+  margin-left: 24rpx;
+  background: #ccc;
+}
+.my-avatar > image{
+  width: 100%;
+  display:inline;
+}
+.my-name{
+  color: #fff;
+  font-size: 26rpx;
+  padding-top: 55rpx;
+  margin-left: 22rpx;
+}
+.gotoApp{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrow_icon{
+  width: 14rpx;
+  height: 14rpx;
+  margin-left: 10rpx;
+}
+.my-vip{
+  width: 150rpx;
+  height: 58rpx;
+  position: absolute;
+  top: 41rpx;
+  right: 0rpx;
+}
+.my-vip > image{
+  width: 100%;
+  display:inline;
+}
+.avatar{
+    width: 300rpx;
+    height: 300rpx;
+    margin: 30rpx auto;
+    border-radius: 150rpx;
+    background: #ccc;
+    overflow: hidden;
+    position: relative
+}
+.avatar image{
+    width: 100%;
+    display:inline;
+}
+.vip_ava{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 378rpx;
+    left: 445rpx;
+    z-index: 999
+}
+.my_inform{
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+}
+.my_name{
+    
+    color: #333333;
+    display:inline-block;
+    vertical-align:middle;
+    
+}
+.my_name > text {
+    font-size: 44rpx;
+    line-height: 43rpx;
+    display:inline-block;
+}
+.my_name > image {
+    width: 44rpx;
+    height: 44rpx;
+    margin-left: 18rpx;
+    vertical-align:text-top;
+}
+.my_inform_id{
+    font-size: 28rpx;
+    color: #666666;
+}
+.my_ul{
+    margin-top: 56rpx;
+    font-family: SourceHanSansSC-Normal;
+}
+.my_li{
+     width: 718rpx;
+     height: 120rpx;
+     line-height: 120rpx;
+     font-size: 26rpx;
+     color: #333333;
+     margin-left: 21rpx; 
+     display: flex;
+     align-items: center;
+     border-bottom: 1rpx solid #DFDFDF;
+}
+.activity-li{
+  width: 718rpx;
+  height: 160rpx;
+  line-height: 120rpx;
+  font-size: 26rpx;
+  color: #333333;
+  margin-left: 21rpx; 
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #DFDFDF;
+}
+.activity{
+  position: relative;
+  width: 700rpx;
+  height: 150rpx;
+  background-image: url('http://static.yygo.tv/devqiniu/xiaochengxui/o_1cfa92c4u1b6c1nn2uebcl01hgra.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.cashback{
+  position: absolute;
+  top: 51rpx;
+  left: 62rpx;
+  /* width: 50rpx; */
+  font-size: 26rpx;
+  height: 57rpx;
+  color: transparent;
+  background-image: linear-gradient(left,red,blue); 
+  z-index: 10;
+}
+.activity_text{
+  color: #fff;
+  font-size: 26rpx;
+  position: absolute;
+  right: 117rpx;
+}
+.my_li_img{
+    width: 50rpx;
+    height: 50rpx;
+}
+.my_li_img image{
+    width: 100%;
+    height: 100%;
+    display:inline;
+}
+button::after{
+     border: none; 
+}
+.my_li_text{
+    margin-left: 23rpx;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: left
+}
+.my_li_but{
+    margin-left: 185rpx;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    width: 200rpx;
+    height: 114rpx;
+    text-align: left;
+    position: absolute;
+    left: 0rpx;
+}
+.my_li_gold{
+    font-size: 22rpx;
+    color: #666666;
+    text-align:right;
+    position: absolute;
+    right: 23rpx;
+}
+.download_img{
+    clear:both;
+    width: 100%;
+    height: 170rpx;
+    padding-top:10rpx;
+    position: absolute;
+    bottom: 0rpx
+}
+.download_img image{
+    width: 100%;
+    height:165rpx;
+}
+
+.download_img{
+    clear:both;
+    width: 100%;
+    height: 170rpx;
+    padding-top:10rpx;
+}
+.download_img image{
+    width: 100%;
+    height:165rpx;
+}

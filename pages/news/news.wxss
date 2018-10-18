@@ -1,0 +1,68 @@
+@import "../../connemt/tabBar";
+/* pages/news/news.wxss */
+.ne_list{
+    width: 100%;
+    height: 120rpx;
+    padding-left: 24rpx;
+    border-bottom: 1rpx solid #DFDFDF;
+    position: relative
+}
+.ne_avatar{
+    width: 90rpx;
+    height: 120rpx;
+    position: relative;
+}
+.ne_avatar > image{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -30rpx;
+    border-radius: 30rpx;
+    overflow: hidden;
+    
+}
+.ne_nickname{
+    font-size: 26rpx;
+    color: #333333;
+    margin-top: 35rpx;
+}
+.call_record{
+  font-size: 26rpx;
+  color: #333333;
+  margin-top: 44rpx;
+}
+.ne_name_text{
+    font-size: 24rpx;
+    color: #999999;
+    width: 400rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ne_time{
+    font-size: 24rpx;
+    color: #999999;
+    position: absolute;
+    right: 43rpx;
+    top: 35rpx;
+    
+}
+.ne_left{
+    float: left
+}
+.ne_right{
+    float: right
+}
+.superscript{
+    height: 34rpx;
+    border-radius: 17rpx;
+    background: #F95454;
+    color: #fff;
+    border: 1rpx solid #fff;
+    position: absolute;
+    top: 15rpx;
+    left: 60rpx;
+    font-size: 22rpx;
+    padding: 0rpx 10rpx; 
+}

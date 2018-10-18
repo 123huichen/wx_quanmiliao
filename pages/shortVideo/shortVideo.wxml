@@ -1,0 +1,60 @@
+<import src="../../connemt/tabBar"/>
+<view class='video-cen'>
+    <!-- <view class='video-cen' wx-if='{{pretty_video == ""}}'><image mode='aspectFill' src='{{avatar}}'></image></view> -->
+    <video class='video-cen' src='{{pretty_video}}' controls='false' autoplay='true' loop='true' ></video>
+    <!-- 是否是vip -->
+    <cover-view wx-if='{{vip==1}}' class='show-cover'>
+        <cover-view class='video-news' bindtap='videoNews' id=''><cover-image src='../../image/news-icon.png'></cover-image></cover-view>
+        <cover-view wx-if='{{wx_status == 1}}' class='video-wx' bindtap='videowx' id='{{wx}}'><cover-image src='../../image/wx-icon.png'></cover-image></cover-view>
+        <cover-view wx-if='{{work_status == 0}}' class='video-but' bindtap='videoChat'>开始视频</cover-view>
+        <cover-view wx-if='{{work_status == 1}}' class='video-butno' bindtap=''>开始视频</cover-view>
+        <cover-view bindtap="backLastPage" class='come_back'><cover-view class='come_bg'><cover-image src='../../image/back_icon_w.png'></cover-image></cover-view></cover-view> 
+    </cover-view>
+    <cover-view wx-if='{{vip==0}}' class='show-cover'>
+        <cover-view class='video-news' bindtap='videoNewsNo' id=''><cover-image src='../../image/news-icon-no.png'></cover-image></cover-view>
+        <cover-view wx-if='{{wx_status == 1}}' class='video-wx' bindtap='videowxNo'><cover-image src='../../image/wx-icon-no.png'></cover-image></cover-view>
+        <cover-view wx-if='{{work_status == 0}}' class='video-but' bindtap='videoChat'>开始视频</cover-view>
+        <cover-view wx-if='{{work_status == 1}}' class='video-butno' bindtap=''>开始视频</cover-view>
+        <cover-view bindtap="backLastPage" class='come_back'><cover-view class='come_bg'><cover-image src='../../image/back_icon_w.png'></cover-image></cover-view></cover-view>  
+    </cover-view>
+    <cover-view class='video-qm'><cover-view>{{Anchorname}}</cover-view><cover-view class='time-money'>{{price}}金币/分钟</cover-view></cover-view>
+    <cover-view class='video-name'>{{signature}}</cover-view>
+    <cover-view class='label'>
+        <block wx:for-items="{{tags}}" wx:key="">
+            <cover-view class='label-li'>{{item.tag_name}}</cover-view>
+        </block>
+    </cover-view>
+    <!-- <template is='PopUps'></template>  -->
+      <!-- 微信号展示 -->
+      <cover-view class='WeChat' wx-if="{{wx_number}}">{{wx}}</cover-view>
+    <!-- 弹窗 -->
+    <cover-view class='mask' wx-if="{{Mask}}">
+      <!-- vip充值提醒 -->
+      <cover-view class='pop_ups' wx-if='{{privateChat}}'>
+        <cover-view class='pop_top'>温馨提示</cover-view>
+        <cover-view class='pop_text'>您还不是VIP用户不能和小姐姐私聊哦。</cover-view>
+        <cover-view class='pop_but_bot'>
+            <cover-view class='pop_but pop_quxiao' bindtap='cancelVIP'>取消</cover-view>
+            <cover-view class='pop_but pop_succ' bindtap='OpenVIP'>开通</cover-view>
+        </cover-view>
+      </cover-view>
+      <!-- 非vip查看微信微信 -->
+      <cover-view class='pop_ups' wx-if='{{videowxChat}}'>
+        <cover-view class='pop_top'>温馨提示</cover-view>
+        <cover-view class='pop_text'>查看该功能需要解锁VIP会员权限哦。</cover-view>
+        <cover-view class='pop_but_bot'>
+            <cover-view class='pop_but pop_quxiao' bindtap='cancelVIP'>取消</cover-view>
+            <cover-view class='pop_but pop_succ' bindtap='OpenVIP'>开通</cover-view>
+        </cover-view>
+      </cover-view>
+      <!-- 支付查看微信微信 -->
+      <cover-view class='pop_ups' wx-if='{{ViewWX}}'>
+        <cover-view class='pop_top'>温馨提示</cover-view>
+        <cover-view class='pop_text'>查看该功能需要解锁VIP会员权限哦。</cover-view>
+        <cover-view class='pop_but_bot'>
+            <cover-view class='pop_but pop_quxiao' bindtap='cancelVIP'>取消</cover-view>
+            <cover-view class='pop_but pop_succ' bindtap='PaymentWX'>支付</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+</view>

@@ -1,0 +1,104 @@
+.tabbar{
+  width: 100%;
+  height: 98rpx;
+  background: #0E0D0D;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabbar-but{
+  flex: 1;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  font-weight: normal;
+  color: #E1A13C;
+  font-size: 20rpx; 
+}
+.tabbar-icon{
+  width: 60rpx;
+  height: 60rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -30rpx;
+}
+.tabbar-icon > image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.text{
+  color: #666666;
+}
+
+/* 弹窗 */
+.pop_ups{
+  width: 570rpx;
+  height: 376rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -188rpx;
+  margin-left: -285rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.pop_top{
+  width: 100%;
+  height: 92rpx;
+  line-height: 92rpx;
+  border-bottom: 1rpx solid#EDEDED;
+  text-align: center;
+  font-size: 32rpx;
+}
+.pop_text{
+  width: 254rpx;
+  font-size: 28rpx;
+  color: #666666;
+  margin: auto;
+  margin-top: 50rpx;
+  word-wrap:break-word;
+  white-space : normal;
+  text-align: center;
+}
+.pop_but_bot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12rpx;
+}
+.pop_but{
+  width: 260rpx;
+  height: 74rpx;
+  text-align: center;
+  line-height: 74rpx;
+  border-radius: 6rpx;
+  margin-left: 14rpx;
+  margin-right: 4rpx;
+  font-size: 32rpx;
+}
+.pop_quxiao{
+  border: 1rpx solid#D7D7D7;
+}
+.pop_succ{
+  background: #F9B745;
+  color: #fff;
+}
+
+
+/* 头部标题 */
+.title_news {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  font-size:34rpx;
+  background:#FECA77;
+  border-bottom:1rpx solid #DFDFDF;
+  height:65px;
+  line-height:85px;
+  color: #333333;
+}

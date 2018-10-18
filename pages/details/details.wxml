@@ -1,0 +1,133 @@
+<view class=''>
+    <block wx:for-items="{{list}}">
+        <view class='det_avatar'>
+            <image mode='aspectFill' src='{{item.avatar}}'></image>
+            <view class='avatar_name'>{{item.nickname}}</view>
+            <view bindtap="ComeBack" class='come_back'> 
+                <image src='../../images/icon_back_white.png'></image>
+            </view>
+            <view class='avatar_data'>
+                <view class='avatar_flex'>
+                    <view class='avatar_maintitle'>{{item.city}}</view>
+                    <view class='avatar_subtitle'>所在地</view>
+                </view>
+                <view class='avatar_flex'>
+                    <view class='avatar_maintitle'>{{item.attention_num}}</view>
+                    <view class='avatar_subtitle'>粉丝</view>
+                </view>
+                <view class='avatar_flex'>
+                    <view class='avatar_maintitle'>{{item.connect_ratio}}%</view>
+                    <view class='avatar_subtitle'>接通率</view>
+                </view>
+            </view>
+        </view>
+        <view class='det_name_box'>
+            <view class='det_name'>
+                <view class='float'>{{item.nickname}}</view>
+                <view class='det_name_girl float'>
+                    <image src='../../images/icon_girl.png'></image>
+                    <text class='float'>{{item.age}}</text>
+                </view>
+                <view class='det_name_crown float'>
+                    <image src='../../images/crown.png'></image>
+                </view>
+                <text class='det_price'>{{item.wx_info.wx_price}}金币/分钟</text>
+            </view>
+            <view class='det_nameId'>{{item.wx_info.wx_price}}</view> 
+        </view>
+        <view class='det_dynamic'>
+            <text class='det_dy_title'>动态</text>
+            <text class='det_dy_right' bindtap="showDialogBtn">查看全部</text>
+            <scroll-view scroll-x="true" class='det_dynamic_img'>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+                 <view class='det_dynamic_img0'>
+                      <image mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525780831662&di=c2cc80870675c95b566a07f607ce8390&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090224%2F0036036802407491_b.jpg'></image>
+                 </view>
+            </scroll-view>
+        </view>
+        <view class='det_personal'>
+             <view class='det_dy_title'>个人信息</view>
+             <view class='det_dy_vice'>标签：</view>
+             <view class='det_dy_vice'>个性签名：{{item.signature}}</view>
+        </view>
+        <view class='det_gitf'>
+            <view class='det_dy_title'>收到的礼物</view>
+            <view class='det_dy_box'>
+                <view class='det_dy_lists'>
+                    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=862591842,2864954084&fm=27&gp=0.jpg'></image>
+                    <view>玫瑰</view>
+                    <view>×268</view>
+                </view>
+                <view class='det_dy_lists'>
+                    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=862591842,2864954084&fm=27&gp=0.jpg'></image>
+                    <view>玫瑰</view>
+                    <view>×268</view>
+                </view>
+                <view class='det_dy_lists'>
+                    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=862591842,2864954084&fm=27&gp=0.jpg'></image>
+                    <view>玫瑰</view>
+                    <view>×268</view>
+                </view>
+                <view class='det_dy_lists'>
+                    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=862591842,2864954084&fm=27&gp=0.jpg'></image>
+                    <view>玫瑰</view>
+                    <view>×268</view>
+                </view>
+                <view class='det_dy_lists'>
+                    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=862591842,2864954084&fm=27&gp=0.jpg'></image>
+                    <view>玫瑰</view>
+                    <view>×268</view>
+                </view>
+            </view>
+        </view>
+        <view class='clear'></view>
+        <!-- 遮罩层 -->
+        <view class='pop-ups-bg' wx:if="{{showModal}}">
+            <!-- 弹窗 -->
+            <view class='pop-ups'>
+                <view class='modal-title'>APP内方可查看详情</view>
+                <view class='modal-title-vice'>下载APP</view>
+                <view class='modal-footer'>
+                    <view class='btn-cancel' bindtap='onCancel' data-status='cancel'>取消</view>
+                    <view class='btn-confirm' bindtap='onConfirm' data-status='confirm'>确定</view>
+                </view>
+            </view>
+        </view>   
+        <!-- 弹窗结束 --> 
+        <view class='det_bottom'>
+            <view class='det_bottom_letter' capture-bind:touchstart='chatWindow' id='{{item.id}}' data-name='{{item.nickname}}'>
+                <view class='det_bottom_icon'>
+                    <image src='../../images/icon_chat.png'></image>
+                </view>
+                <view class='det_bottom_text'>私信</view>
+            </view>
+            <view class='det_bottom_letter'>
+                <view class='det_bottom_icon'>
+                    <image src='../../images/gift.png'></image>
+                </view>
+                <view class='det_bottom_text'>礼物</view>
+            </view>
+            <view class='det_bottom_video' bindtap="videoChat">
+                <view class='det_botvid_img'><image src='../../images/icon_video.png'></image></view>
+                <view class='det_botvid_text'>和她视频</view>
+            </view>
+        </view>
+    </block>    
+</view>

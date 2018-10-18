@@ -1,0 +1,58 @@
+/* pages/videoOver/videoOver.wxss */
+.over_bg{
+    width: 100%;
+    height: 100vh;
+    filter: blur(10px);
+}
+.over_bg > image{
+    width: 100%;
+    height: 100vh;
+    display: block
+}
+.over_avatar{
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 125rpx;
+    overflow: hidden;
+    position: absolute;
+    top: 280rpx;
+    left: 50%;
+    margin-left: -125rpx;
+    z-index: 999
+}
+.over_avatar > image{
+    width: 100%;
+    height: 100%;
+    display: block
+}
+.cver_name{
+    position: absolute;
+    top: 560rpx;
+    width: 100%;
+    text-align: center;
+    font-size: 50rpx;
+    color: #fff;
+}
+.cver_text{
+    font-size: 34rpx;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 640rpx;
+}
+.cver_cancel{
+    width: 128rpx;
+    height: 128rpx;
+    position: absolute;
+    bottom: 60rpx;
+    left: 50%;
+    margin-left: -64rpx;
+    border-radius: 64rpx;
+    overflow: hidden;
+}
+.cver_cancel > image{
+    width: 100%;
+    height: 100%;
+    display: block
+}

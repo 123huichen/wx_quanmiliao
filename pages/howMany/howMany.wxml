@@ -1,0 +1,21 @@
+<!--pages/howMany/howMany.wxml-->
+<view class='container'>
+    <view class='title_news'>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+      </view>
+      <text class='title_cha'>收益明细</text>
+    </view> 
+     <scroll-view class='many_ul' wx-if='{{list !== ""}}' scroll-y='true'>
+       <block wx:for-items="{{list}}">
+          <view class='many_li'>
+              <view>{{item.nickname}}</view>
+              <view class='many_li_text'>{{item.note}}</view>
+              <view class='many_li_time'>
+                  <view class='many_li_muny'>{{item.commission}}</view>
+                  <text class=''>{{item.create_at}}</text>
+              </view>
+          </view>
+       </block>
+    </scroll-view> 
+</view>    

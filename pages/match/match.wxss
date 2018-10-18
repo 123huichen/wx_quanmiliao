@@ -1,0 +1,54 @@
+/* pages/match/match.wxss */
+.match_bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url(http://static.yygo.tv/Fakemedia/o_1ccl83aprmlb136dufm156s10dqf.png);
+    background-repeat: no-repeat;  
+    background-size: 100% 100%;
+}
+.mat_cent{
+    width: 318rpx;
+    height: 176rpx;
+    position: absolute;
+    bottom: 103rpx;
+    left: 50%;
+    margin-left: -159rpx;
+}
+button::after{
+    border: none;
+}
+.mat_but{
+    width: 318rpx;
+    height: 176rpx;
+    position: absolute;
+    bottom: 103rpx;
+    left: 50%;
+    margin-left: -159rpx;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+.mat_cent image{
+    width: 100%;
+    height: 100%;
+    display: block
+}
+.mat_text{
+    position: absolute;
+    bottom: 280rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.title_cha{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    font-size:34rpx;
+    color:#fff;
+    height:65px;
+    line-height:85px;
+
+}

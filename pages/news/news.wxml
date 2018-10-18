@@ -1,0 +1,43 @@
+<import src="../../connemt/tabBar"/>
+<view class='container'>
+    <view class='title_news'>
+      <text class='title_cha'>消息</text>
+    </view>
+    <!-- 通话记录 -->
+    <view class='ne_list' capture-bind:touchstart='callRecords'>
+        <view class='ne_avatar ne_left'>
+            <image src='../../image/call_icon.png'></image>
+            <text wx:if="{{item.unreadnum > 0}}" class='superscript'>{{callnun}}</text>
+        </view>
+        <view class='ne_name ne_left'>
+            <view class='call_record'>通话记录</view>
+        </view>
+        <view class='ne_time'></view>
+    </view>
+    <!-- 系统消息 -->
+    <view class='ne_list' capture-bind:touchstart='system'>
+        <view class='ne_avatar ne_left'>
+            <image src='../../image/system_icon.png'></image>
+            <text wx:if="{{item.unreadnum > 0}}" class='superscript'>{{systemnun}}</text>
+        </view>
+        <view class='ne_name ne_left'>
+            <view class='call_record'>系统消息</view>
+        </view>
+        <view class='ne_time'></view>
+    </view>
+    <!-- 消息列表 -->
+    <block wx:for-items="{{list}}">
+        <view class='ne_list' capture-bind:touchstart='chatWindow' id='{{item.from_uid}}' data-name='{{item.from_nickname}}'>
+            <view class='ne_avatar ne_left'>
+                <image src='{{item.from_avatar}}'></image>
+                <text wx:if="{{item.unreadnum > 0}}" class='superscript'>{{item.unreadnum}}</text>
+            </view>
+            <view class='ne_name ne_left'>
+                <view class='ne_nickname'>{{item.from_nickname}}</view>
+                <view class='ne_name_text'>{{item.last_msg}}</view>
+            </view>
+            <view class='ne_time'>{{item.time_format}}</view>
+        </view>
+    </block> 
+    <!-- <template is='tabbar'></template>-->
+</view>    

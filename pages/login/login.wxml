@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+    <!-- <loading hidden="{{loadingHidden}}"> 登录中... </loading>     -->
+<view class='login-bg'>
+      <!-- 自定义弹框开始 -->
+    <view wx:if="{{showModel}}" class="model">
+        <view class="modelTitle">获取微信授权信息</view> 
+        <view class="modelBody">微信登录需获取您的信息，请确认</view>
+        <view class="btns">
+            <button open-type="getUserInfo" class="agree" bindgetuserinfo="agreeGetUser" lang="zh_CN">确认</button>
+        </view>
+    </view>
+    <view wx:if="{{showModel}}" class="mask"></view>
+    <!-- 自定义弹框结束 -->    
+</view>

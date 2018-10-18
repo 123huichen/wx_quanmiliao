@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/ceshi/ceshi",
+    
+    "pages/withdraw/withdraw",
+    "pages/share/share",
+    "pages/matchAnimation/matchAnimation",
+    "pages/memberCentre/memberCentre",
+    "pages/chatroom/chatroom",
+    "pages/match/match",
+    "pages/recharge/recharge",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/details/details",
+    "pages/news/news",
+    "pages/meeting/meeting",
+    "pages/videoOver/videoOver",
+    "pages/shortVideo/shortVideo",
+    "pages/howMany/howMany",
+    "pages/callRecords/callRecords",
+    "pages/Invite/Invite",
+    "pages/download/download",
+    "pages/systemNews/systemNews"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9B30FF",
+    "navigationBarTitleText": "全民蜜聊",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#E1A13C",
+    "borderStyle": "black",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "selectedIconPath": "image/icon-home1.png",
+        "iconPath": "image/icon-home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/icon_match.png",
+        "iconPath": "image/icon_match.png",
+        "pagePath": "pages/matchAnimation/matchAnimation",
+        "text": "一键约爱"
+      },
+      {
+        "selectedIconPath": "image/icon_tab_p_message1.png",
+        "iconPath": "image/icon_tab_p_message.png",
+        "pagePath": "pages/news/news",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "image/icon_tab_n_my1.png",
+        "iconPath": "image/icon_tab_n_my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<!--pages/videoOver/videoOver.wxml-->
+<view class='over_bg'>
+    <image mode='scaleToFill' src='{{to_avatar}}'></image>
+</view>
+<view class=''>
+    <view class='over_avatar'><image src='{{to_avatar}}'></image></view>
+    <view class='cver_name'>{{to_nickname}}</view>
+    <view class='cver_text'>小姐姐连线中，请勿挂断...</view>
+    <view class='cver_cancel' bindtap='cancelVideo'><image src='../../images/icon_off.png'></image></view>
+</view>

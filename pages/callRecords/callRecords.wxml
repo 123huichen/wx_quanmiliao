@@ -1,0 +1,41 @@
+<!--pages/callRecords/callRecords.wxml-->
+<view class='cha-bg'>
+    <view class='title_news'>
+      <text class='title_cha'>视频通话记录</text>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+      </view>
+    </view>
+    <!-- 消息显示区域 -->
+    <scroll-view scroll-y='true' class='callrecords' bindscrolltolower='bottomLoad'>
+       <block wx:for-items="{{list}}"> 
+        <view class='callrecords-box'>
+           <view class='avat-top'>
+              <view class='avat-top-left'>
+                <view class='avatar'><image src='{{item.avatar}}'></image></view>
+                <view class='name-old'>
+                   <view class='name'>{{item.nickname}}</view>
+                   <view class='old'>
+                      <text wx-if='{{item.sex == 1}}'>男</text>
+                      <text wx-if='{{item.sex == 2}}'>女</text> | <text class='age'>{{item.age}}</text></view>
+                </view>
+              </view>
+              <view class='avat-top-right'>
+                <view class='time'>{{item.time_format}}</view>
+                <view class='onceAgain'>再次拨打</view>
+              </view>
+           </view>
+           <view class='time-long-bott'>
+              <view class='time-long'>
+                 <view class='time-long-top'>{{item.time}}</view>
+                 <view class='time-long-bot'>时长</view>
+              </view>
+              <view class='time-long'>
+                 <view class='time-long-top'>{{item.coin}}</view>
+                 <view class='time-long-bot'>支出</view>
+              </view>
+           </view>
+        </view>
+       </block> 
+    </scroll-view>
+</view>    

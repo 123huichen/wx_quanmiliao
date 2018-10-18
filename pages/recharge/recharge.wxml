@@ -1,0 +1,62 @@
+<view class='container'>
+    <view class='title_home_me'>金币充值</view>
+    <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+    </view>
+    <view class='recharge_top'>
+        <view class='recharge_top_morry'>{{myGold}}</view>
+        <view class='recharge_top_number'>当前金币</view>
+    </view>
+    <view class='package'>
+        <block wx:for-items="{{list}}">
+            <view class='package_li'>
+                <!-- 限时赠送/本月热卖 -->
+                 <!-- <view class='package_get'><image src='{{item.icon}}'></image></view>   -->
+                <view class='package_morry'>
+                     <image src='../../images/icon_recharge_coin.png'></image> 
+                    <text>x{{item.coin}}</text>
+                </view>
+                <view class='package_hot' wx-if="item.is_hot == 1"></view>
+                <!-- <view class='package_center'>
+                     套餐描述 
+                    <view class='package-description'>{{item.desc}}</view>
+                     vip描述 
+                    <view class='vip-description'>{{item.vip_desc}}</view>
+                </view> -->
+                <view class="{{item.id==selectId?'package_selected':'package_but'}}" data-id='{{item.id}}' bindtap="chooseLocation" id='{{item.money}}'>￥{{item.money}}</view>
+            </view>
+        </block>     
+    </view>
+    <!-- <view class='package'>
+        <text class='package_text'>选择套餐</text>
+        <block wx:for-items="{{list}}" wx:key="">
+            <view class='package_select' bindtap="chooseLocation" id='package'>
+                <view class="{{tabArr.curHdIndex=='{{item.id}}'? 'click_package_box' : 'package_box'}}" data-id="{{item.money}}">
+                    <view class='package_off' data-id="{{item.money}}">限时优惠</view>
+                    <view class='package_boxtext' data-id="{{item.money}}">
+                        <text class='package'>{{item.coin}}</text>
+                        <image src='../../images/icon_recharge_coin.png'></image></view>
+                    <text class='package_boxnum' data-id="{{item.money}}">￥{{item.money}}</text>
+                </view>
+            </view>
+        </block>
+        <view class='clear'></view>
+        <button class='recharge_but' bindtap="rechargeImmediately">立即充值</button>
+    </view> -->
+    <!-- 遮罩层 -->
+    <!-- <cover-view class='pop-ups-bg' wx:if="{{showModal}}">
+        <cover-view class='pop-ups'>
+            <cover-view class='modal-title'>APP内方可查看详情</cover-view>
+            <cover-view class='modal-title-vice'>下载APP</cover-view>
+            <cover-view class='modal-footer'>
+                <cover-view class='btn-cancel' bindtap='onCancel' data-status='cancel'>取消</cover-view>
+                <cover-view class='btn-confirm' bindtap='onConfirm' data-status='confirm'>确定</cover-view>
+            </cover-view>
+        </cover-view> 
+    </cover-view>    -->
+    <!-- 弹窗结束 --> 
+    <view class='recharge_box'>
+        <view class='recharge_but' bindtap="rechargeImmediately">确认充值</view>
+        <text class='recharge_bottom'>温馨提示:请理性消费，适度娱乐！</text>
+    </view>
+</view>    

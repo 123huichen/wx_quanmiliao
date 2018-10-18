@@ -1,0 +1,21 @@
+<!--pages/Invite/Invite.wxml-->
+<view class='container'>
+    <view class='title_news'>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../image/back_icon_w.png'></image>
+      </view>
+      <text class='title_cha'>马上邀请</text>
+    </view>
+    <!-- <view class='avatar'><image src='{{avatar}}'></image></view>
+    <view class='name'>{{name}}</view>
+    <view class='title'>你想要的，这里都有！</view> -->
+    <view class='with_bg'>
+       <!-- <view class='getinvi'><image src='{{dow_url}}'></image></view> -->
+       <canvas canvas-id="mycanvas" class='canvas' id="mycanvas"/>
+    </view>
+    <!-- <view class='with_but'>立即下载</view> -->
+    <!-- <text class='with_but_text'>长按识别二维码哦</text>  -->
+    <button class='but select' open-type="share">直接分享给朋友</button>
+    <!-- <view class='' bindtap=''>直接分享给朋友</view> -->
+    <view class='but download' bindtap='downloadFile'>保存相册分享朋友圈</view>
+</view>  

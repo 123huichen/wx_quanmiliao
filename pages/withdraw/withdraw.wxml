@@ -1,0 +1,21 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view class='container'>
+    <view class='title_news'>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../image/back_icon_w.png'></image>
+      </view>
+      <text class='title_cha'>立即下载</text>
+    </view>
+    <view class='with_bg'>
+        <view class='with_bg_text'>猎艳手机APP</view>
+        <text class='with_bg_text1'>随时随地在线视频</text>
+    </view>
+    <view class='with_but' bindtap='jumpOutside'>立即下载</view> 
+    <text class='with_but_text'>下载猎艳APP赠送200金币</text> 
+
+
+    <view class='mask' wx-if="{{Mask}}">
+      <!-- 公众号二维码 -->
+       <view class='QRcode'><image src='{{wechart_img}}'></image></view>
+    </view>  
+</view>  

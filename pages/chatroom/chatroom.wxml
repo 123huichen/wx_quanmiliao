@@ -1,0 +1,114 @@
+<view class='cha-bg'>
+    <view class='title_news'>
+      <text class='title_cha'>{{user_name}}</text>
+      <view bindtap="backLastPage" class='come_back'> 
+        <image src='../../images/icon_back.png'></image>
+      </view>
+    </view> 
+    <!-- 消息显示区域 -->
+    <scroll-view scroll-y='true' class='{{view?"cha_shownews":"cha_shownews_top"}}' scroll-into-view="{{toView}}"  scroll-top="{{scrollTop}}" style='' bindtap="hideGiftUl" bindscrolltoupper='dropDown'>
+        <block wx:for-items="{{news_lists}}">
+            <!-- 本人发送 -->
+            <view wx:if="{{item.layout == 'right'}}" id='{{item.id}}' class='message'> 
+                <view wx:if="{{item.type == 'message.gift'}}">
+                    <!-- 时间 -->
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='self'>
+                        <image class="avatar" src="{{item.from_info.avatar}}"/>
+                        <!-- <view class='ne_li_avatar'>
+                            <image src='{{item.from_info.avatar}}'></image>
+                        </view> -->
+                        <view class='ne_li_gift'>
+                            <view class='ne_li_giftimage'><image src='{{item.data.gift.gifticon}}'></image></view>
+                            <view class='clear'></view>
+                            <text>你送出来{{item.data.gift.giftname}} X {{item.data.gift.giftnum}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{item.type == 'message.closeVideo'}}">
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='self'>
+                        <image class="avatar" src="{{item.from_info.avatar}}"/>
+                        <view class='msg'>{{item.data.text}}</view>
+                    </view>
+                </view>
+                <view wx:if="{{item.type == 'message.text'}}">
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='self'>
+                        <image class="avatar" src="{{item.from_info.avatar}}"/>
+                        <view class='msg'>{{item.data.text}}</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 别人发送 -->
+            <view wx:if="{{item.layout == 'left'}}" id='{{item.id}}' class='message'>
+                <view wx:if="{{item.type == 'message.gift'}}">
+                    <!-- 时间 -->
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='ne_ul'>
+                        <view class='ne_li_avatar0' bindtap="jumpToMyPage" id='{{item.from_info.id}}'>
+                            <image src='{{item.from_info.avatar}}'></image>
+                        </view>
+                        <view class='ne_li_gift0'>
+                            <view class='ne_li_giftimage0'><image src='{{item.data.gift.gifticon}}'></image></view>
+                            <view class='clear'></view>
+                            <text>对方送你{{item.data.gift.giftname}} X {{item.data.gift.giftnum}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{item.type == 'message.closeVideo'}}">
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='ne_ul'>
+                        <image class="avatar" src="{{item.from_info.avatar}}"  bindtap="jumpToMyPage"/>
+                        <view class='ne_li_text0'>{{item.data.text}}</view>
+                    </view>
+                </view>
+                <view wx:if="{{item.type == 'message.text'}}">
+                    <view class="time"><text>{{item.time}}</text></view>
+                    <view class='ne_ul'>
+                        <image class="avatar" src="{{item.from_info.avatar}}"  bindtap="jumpToMyPage"/>
+                        <view class='ne_li_text0'>{{item.data.text}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view >
+    <!-- 礼物动画层 -->
+    <!-- <view animation="{{animationData}}" class='{{showView?"animat_center_show":"animat_center_hide"}}'><image src='{{animationgift}}'></image></view> -->
+    <view animation="{{animationData}}" class='{{showView?"animat_center_show":"animat_center_hide"}}'><image src='{{animationgift}}'></image></view> 
+    <!-- 视频按钮 -->
+    <view class='video-but' wx-if='{{kefu}}'><image bindtap="videoChat" src='../../images/icon_message_video.png'></image></view>
+    <!-- 礼物按钮 -->
+    <view class='gitf-but' wx-if='{{kefu}}'><image bindtap="showGiftUl" src='../../images/icon_gift.png'></image></view>
+    <!-- 礼物列表 -->
+    <view class="{{giftpage?'gitf-box-show':'gitf-box-hide'}}">
+        <swiper class='gitf-ul' indicator-dots="true" duration="300" indicator-color='rgba(0, 0, 0,0.3)' indicator-active-color="#EC82F5">
+            <block wx:for-items="{{listgift}}">
+                <swiper-item class='gitf-page'>
+                    <view style='display: flex;flex-wrap:wrap;'>
+                        <view wx:for-items="{{item}}" class="{{item.id == selectId?'select':'cancel'}}" data-id="{{item.id}}" id='{{item.id}}' bindtap="clickGift">
+                            <view class='gitf-bag'><image src='{{item.gifticon}}'></image></view>
+                            <view class='showvip' wx-if="{{item.is_vip == 1}}"><image mode='aspectFit' src='../../images/vip.png'></image></view>
+                            <view>{{item.giftname}}</view>
+                            <text>{{item.needcoin}}</text>
+                        </view>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='gitf-ul-bot'>
+            <view class='give-money' bindtap='Recharge' id='{{coin}}'>{{coin}}金币 <text>充值></text></view>
+            <view class='give-away' bindtap='Gift'>赠送</view>
+        </view>
+    </view> 
+    <view class='{{view_bot_but?"cha-bottom":"cha-bottom-top"}}'> 
+        <form bindreset="cleanInput">
+            <view class="sendmessage">
+                <input id="message" bindinput="bindChange" placeholder="请输入聊天内容…"></input>
+                 <button bindtap="" formType="reset" class='reset'>发送</button>  
+            </view>
+        </form>
+    </view>
+    
+</view>
+

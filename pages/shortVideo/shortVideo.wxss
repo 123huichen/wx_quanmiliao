@@ -1,0 +1,168 @@
+@import "../../connemt/tabBar";
+/* pages/shortVideo/shortVideo.wxss */
+.video-cen{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display:block;
+}
+/* .video-cen > image {
+  width: 100%;
+  height: 100%;
+  display: block;
+} */
+.video-but{
+  width: 348rpx;
+  height: 74rpx;
+  position: absolute;
+  z-index: 9999;
+  bottom: 98rpx;
+  left: 50%;
+  margin-left: -174rpx;
+  border-radius: 37rpx;
+  background: #E9C683;
+  color: #333333;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 30rpx;
+  visibility:visible;
+}
+.video-butno{
+  width: 348rpx;
+  height: 74rpx;
+  position: absolute;
+  z-index: 9999;
+  bottom: 98rpx;
+  left: 50%;
+  margin-left: -174rpx;
+  border-radius: 37rpx;
+  background: #999999;
+  color: #333333;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 30rpx;
+  visibility:visible;
+}
+.video-news{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  z-index: 999;
+  bottom: 98rpx;
+  left: 38rpx;
+}
+.video-news > image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.video-wx{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  z-index: 999;
+  bottom: 98rpx;
+  right: 44rpx;
+}
+.video-wx > image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.video-qm{
+  font-size: 30rpx;
+  position: absolute;
+  z-index: 999;
+  bottom: 359rpx;
+  left: 24rpx;
+  color: #fff;
+  display: flex;
+}
+.label{
+  font-size: 22rpx;
+  color: #fff;
+  position: absolute;
+  z-index: 999;
+  bottom: 218rpx;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  left:24rpx;
+}
+.label-li{
+  margin-right: 25rpx;
+  /* background: linear-gradient(to right, red , blue); */
+  background: rgba(0, 0, 0, 0.5); 
+  /* background: linear-gradient(to right, #6600ff , #ff00c0); */
+  padding: 0rpx 25rpx; 
+  border-radius: 20rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  min-width: 50rpx;
+  text-align: center;
+  float:left;
+
+}
+.time-money{
+  font-size: 26rpx;
+  color: #E9C683;
+  margin-left: 12rpx;
+}
+.video-name{
+  font-size: 28rpx;
+  position: absolute;
+  z-index: 999;
+  bottom: 290rpx;
+  left: 24rpx;
+  color: #fff;
+}
+.show-cover{
+  width:100%;
+  height:100vh;
+  position:absolute;
+  z-index:666;
+  bottom:0rpx;
+}
+.come_bg{
+  position: absolute;
+  z-index:999;
+  top: 76prx;
+  left:25rpx;
+  width: 20rpx;
+  height: 36rpx;
+   background-image: url('http://static.yygo.tv/devqiniu/xiaochengxui/o_1cf9jusme1m9gk2u18p31i84j50a.png'); 
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.come_back{
+  position:absolute;
+  top:76rpx;
+  width:50rpx;
+  height:85px;
+  left:25rpx;
+  z-index:999;
+  align-items: center;
+  justify-content: space-between;
+}
+.come_back > cover-image{
+  width: 100%;
+  height: 100%;
+  display: block
+}
+.WeChat{
+  width: 190rpx;
+  height: 86rpx;
+  position: absolute;
+  bottom: 170rpx;
+  right: 11rpx;
+  background-image: url(http://static.yygo.tv/devqiniu/xiaochengxui/o_1cff710d9o6610md1n021ir9d6ka.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  line-height: 75rpx;
+  text-align: center;
+  color: #F8F8F8;
+  font-size: 24rpx;
+}

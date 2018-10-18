@@ -1,0 +1,53 @@
+<!--pages/memberCentre/memberCentre.wxml-->
+<view class='container'>
+    <view class='mem_cen_top'> 
+        <view class='title_home_me'>会员中心</view>
+        <view bindtap="backLastPage" class='come_back'> 
+            <image src='../../images/icon_back_white.png'></image>
+        </view>
+        <!-- 会员图标 -->
+        <view class='mem_cen_log'><image src='../../images/icon_big_vip.png'></image></view>
+        <!-- 到期时间 -->
+        <view class='mem_cen_toptime'>{{nickname}} | 还剩{{timeday}}天到期</view>
+        <view class='mem_cen_topgun'>用户〝蓝**子〞成功购买3个月VIP</view>
+    </view> 
+    <scroll-view scroll-y='true' class='mem_cen_main'> 
+        <view class='mem_cen_title'><image src='../../images/member_privilege.png'></image></view>
+        <block wx:for-items="{{list}}" wx:key=""> 
+          <view class='mem_cen_li'>
+              <view class='mem_cen_liImg'><image src='{{item.url}}'></image></view>
+              <view class='mem_cen_liText'>
+                    <view class='lord'>{{item.name}}</view>
+                    <text class='vice'>{{item.desc}}</text>
+              </view>
+          </view>
+        </block> 
+    </scroll-view> 
+    <view class='mem_cen_foot'>
+        <view class='mem_cen_bot' bindtap='Member'><image src='../../image/btn_recharge_vip.png'></image></view>
+    </view>
+    
+    <!-- 会员套餐 -->
+    <view class='mask' wx-if="{{Mask}}">
+        <view class='member'>
+            <view class='member-top'>
+                <view class='member-title'><image src='../../image/img_buy_vip.png'></image></view>
+                <view class='member-clear' bindtap='memberClear'><image src='../../image/icon_pop_close.png'></image></view>
+            </view>
+            <view class='member-vipul'>
+                <view class='member-vipli'>
+                    <view class='member-vipImg'><image src='../../image/icon_combo_vip.png'></image></view>
+                    <block wx:for-items="{{listVip}}" wx:key=""> 
+                        <text class="{{item.id == selectId?'select':'member-viptext'}}"  id='{{item.id}}' data-id='{{item.price}}' data-name='{{item.origin_price}}' bindtap='clickVIP'>{{item.name}}</text>
+                    </block> 
+                </view>
+                <view class='member-vipli'>
+                    <view class='member-vipImg'><image src='../../image/icon_price_vip.png'></image></view>
+                    <text class='member-vipmunx'>{{Vipmoney}}</text><text class='member-vipmuny'>元</text><text class='original-price'>原价{{originalPrice}}元</text>
+                </view>
+            </view>
+            <view class='member-but' bindtap='rechargeImmediately'><image src='../../image/btn_buy_vip.png'></image></view>
+            <!-- <view class='member-but1'><image src='../../image/btn_invite_friends.png'></image></view> -->
+        </view>
+    </view>
+</view>        

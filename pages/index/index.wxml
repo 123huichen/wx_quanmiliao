@@ -1,0 +1,80 @@
+<import src="../../connemt/tabBar"/>
+<!-- <loading hidden="{{loadingHidden}}"> 加载中... </loading> -->
+<view class='container'>
+    <!-- <view class='title_home'>猎艳秀</view>
+    <view class='home_top_box'>
+        <view class='home_top_bg' bindtap='akeyLove'>
+             <view class='icon_home_match'><image src='../../images/icon_home_match.png'></image></view>
+             <view class='icon_home_phone'><image src='../../images/icon_home_match2.png'></image></view>
+             <view class='icon_home_text'><view>一键约爱</view><text>1024人正在偶遇</text></view>
+             <view class='icon_more'><image src='../../images/icon_more.png'></image></view>
+        </view>
+    </view> -->
+    
+    <view class="banner">
+        <swiper class="banner">
+            <block wx:for-items="{{bannerImg}}" wx:key=""> 
+                <swiper-item class="banner">
+                    <image bindtap='banner' src="{{item.pic_url}}"/>
+                </swiper-item>
+            </block>
+        </swiper>  
+    </view>
+    
+    <view style='background: #151515;'>
+        <view class='goddess_box'>
+              <block wx:for-items="{{list}}" wx:key=""> 
+            <!-- <block wx:for-items="{{listssss}}" wx:key=""> -->
+                <view class='video-box' data-id='{{index}}' >
+                    <image mode='aspectFill' src="{{item.avatar}}" bindtap="jumpToMyPage" id='{{item.pretty_video}}' data-id='{{item.id}}' data-name='{{item.work_status}}'></image>
+                    <!-- 不在线 -->
+                    <!-- <view class='anchor_status' wx-if="{{item.line_status == 0}}"><image src='../../images/offline.png'></image></view> -->
+                    <!-- 在线空闲 -->
+                    <view class='anchor_status' wx-if="{{item.work_status == 0}}"><image src='../../image/idle.png'></image></view> 
+                    <!-- 在线忙碌 -->
+                    <view class='anchor_status' wx-if="{{item.work_status == 1}}"><image src='../../image/busy.png'></image></view>
+                    <view class='det_name anchor_name'>
+                        <view class='float'>{{item.nickname}}</view>
+                        <view class='det_name_crown float'>
+                            <image src='../../images/crown.png'></image> 
+                        </view>
+                    </view>
+                    <view class='det_name_girl anchor_old'>
+                        <image src='../../images/icon_girl.png'></image>
+                        <text class='float'>{{item.age}}</text>
+                    </view>
+                    <text class='anchor_address'>{{item.city}}</text> 
+                    <!-- <video src='{{item.pretty_video}}' class='showVideo'></video> -->
+                </view>
+            </block>
+        </view> 
+
+        <view class='mask' wx-if="{{Mask}}">
+          <!-- 赠送金币弹窗 -->
+          <view class='Giftgold' wx-if="{{Giftgold}}"> 
+              <view class='Giftgold-top'></view>
+              <view class='Giftgold-clear' bindtap='cancelPopUps'></view>
+              <view class='Giftgold-mun'>{{small_givetype_0}}</view>
+              <button class='Giftgold-but' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+              <view class='Giftgold-text'>允许授权用户手机权限，赠送{{small_givetype_0}}金币</view>
+          </view>
+          <!-- 领取成功 -->
+          <view class='success-gold' wx-if="{{successGold}}">
+            <view class='success-bg'></view>
+            <view class='success-volume'>{{small_givetype_0}}金币</view>
+            <view class='success-text'>恭喜您已激活{{small_givetype_0}}金币赶快去视频体验吧！</view>
+            <view class='success-clear' bindtap='cancelSuccess'></view>
+          </view>
+          <!-- 强制一键约爱 --> 
+          <view class='oneKeylive' wx-if="{{oneKeylive}}">
+            <view class='pop_top'>立即前往</view>
+            <view class='prompt'>一对一视频万千小姐姐等你来认识哦</view>
+            <view class='prompt-but'>
+                <view class='projection' bindtap='akeyLove'>一键约爱</view>
+            </view>
+          </view> 
+        </view>  
+        
+        <!-- <template is='tabbar'></template> -->
+    </view> 
+</view>

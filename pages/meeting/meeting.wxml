@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view id="main" class="content agora-bg flex-center-column">
+  <view id="video-container" class="video-container n{{totalUser}}">
+    <cover-view class="pusher-container" style="width: 200rpx; height: 300rpx; position: absolute; z-index: 9999;">
+       <live-pusher wx-if="{{pushUrl!==''}}" style="height:300rpx; position: absolute; width: 100%" url="{{pushUrl}}" mode="RTC" class="camera" bindnetstatus="recorderInfo" bindstatechange="recorderStateChange" muted="{{muted}}" beauty="{{makeup?'5':'0'}}" max-bitrate="500" waiting-image="https://webdemo.agora.io/away.png"
+        autopush="true"/> 
+      <cover-view wx-if="{{pushing}}" class="sud flex-center-column" style="position: absolute; width: 100%; height: 100%;justify-content:center">
+        <cover-image style="width: 128px;height:103px" src="../../images/loading.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <block wx:for="{{playUrls}}" wx:key="key">
+      <!-- <view class="play-container" style="left:{{item.left}}px; top:{{item.top}}px; width: {{item.width}}px; height: {{item.height}}px; "> -->
+      <view class="play-container" style="position: absolute; width: 100%; height: 100vh;top:-54px;">
+        <live-player id="player-{{item.uid}}" src="{{item.src}}" mode="RTC" class="player" bindstatechange="playerStateChange" object-fit="contain" style="position: absolute;width: 100%; height: 100vh; z-index: 99;" autoplay="true" />
+        <cover-view wx-if="{{item.loading}}" class="sud flex-center-column" style="position: absolute; width: 100%; height:{{item.height}}px;justify-content:center">
+          <cover-image style="width: 128px;height:103px" src="../../images/loading.png"></cover-image>
+        </cover-view>
+        <cover-view wx-if="{{item.holding}}" class="sud flex-center-column" style="position: absolute; width: 100%; height:{{height}}px;justify-content:center; top: 0;">
+          <cover-image style="width: 128px;height:103px" src="../../images/network.png"></cover-image>
+        </cover-view>
+      </view>
+    </block>
+    <!-- 显示礼物列表 -->
+      <cover-view class='mask-gift' wx-if='{{giftBox}}'>
+       <cover-view class='collapsegift' bindtap='collapsegift'></cover-view>  
+        <cover-view class='gift-box' wx-if='{{giftBox}}'>
+            <cover-view class='gitf-ul'>
+              <cover-view style='flex-wrap:wrap;display:inline-block;'> 
+                  <block wx:for-items="{{listgift}}">
+                    <cover-view class="{{item.id == selectId?'select':'cancel'}}" data-id="{{item.id}}" id='{{item.id}}' bindtap="clickGift">
+                        <cover-view class='gitf-bag'><cover-image src='{{item.gifticon}}'></cover-image></cover-view>
+                        <cover-view class='showvip' wx-if="{{item.is_vip == 1}}"><cover-image mode='aspectFit' src='../../images/vip.png'></cover-image></cover-view>
+                        <cover-view>{{item.giftname}}</cover-view>
+                        <cover-view>{{item.needcoin}}</cover-view>
+                    </cover-view>
+                  </block>
+              </cover-view> 
+            </cover-view>
+            <cover-view class='gitf-ul-bot'>
+                <cover-view class='give-money'>{{coin}}金币</cover-view>
+                <cover-view class='give-away' bindtap='Gift'>赠送</cover-view>
+            </cover-view> 
+        </cover-view>
+     </cover-view> 
+     <!-- <cover-view animation="{{animationData}}" class='{{showView?"animat_center_show":"animat_center_hide"}}'><cover-image src='{{animationgift}}'></cover-image></cover-view> -->
+  </view>
+  <!-- 操作按钮 -->
+  <view class="footer flex-center-column">
+    <view class="toolbar">
+      <button plain="true" class="camera" bindtap='onSwitchCamera'></button>
+      <button plain="true" class="gift" bindtap='ongiftList'></button>
+      <button plain="true" class="hangup" bindtap='onLeave'></button>
+    </view>
+  </view>
+</view>

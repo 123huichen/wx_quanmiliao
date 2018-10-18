@@ -1,0 +1,267 @@
+/* pages/recharge/recharge.wxss */
+.recharge_top{
+    text-align: center;
+    height: 400rpx;
+    color: #fff;
+    overflow-y:hidden;
+    background-image: url(http://static.yygo.tv/Fakemedia/o_1cer2hil51pd81fq01g11mt88ma.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.title_home_me{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  font-size:34rpx;
+  color:#333333;
+  height:88rpx;
+  line-height:88rpx;
+  padding-top:40rpx;
+  position: fixed;
+  width: 100%;
+}
+.come_back{
+  position:absolute;
+  top:0rpx;
+  line-height:85px;
+  width:50rpx;
+  height:85px;
+  left:25rpx;
+  z-index:999;
+}
+.recharge_top_morry{
+    width: 100%;
+    font-size: 50rpx;
+    position: absolute;
+    color: #333333;
+    text-align: center;
+    top: 192rpx;
+}
+.recharge_top_number{
+    width: 100%;
+    font-size: 32rpx;
+    position: absolute;
+    color: #333333;
+    text-align: center;
+    top: 252rpx;
+}
+.recharge_top_view{
+    position: absolute;
+    right: 25rpx;
+    font-size: 28rpx;
+}
+.recharge_top_morry > image{
+    width: 32rpx;
+    height: 32rpx;
+    display: block;
+}
+.recharge_top_morry > text {
+    display: inline-block;
+    padding-left: 10rpx;
+}
+.package{
+    font-family: PingFang-SC-Regular
+}
+.package_li{
+    width: 100%;
+    height: 140rpx;
+    border-bottom: 1rpx solid #DFDFDF;
+    display: flex;
+    overflow:hidden;
+    white-space:nowrap;
+    position: relative;
+}
+.package_center{
+    white-space:break-all;
+    display:block;
+    word-wrap:break-word;
+    max-width:500rpx;
+    float:right;
+    margin-right:20rpx;
+    font-size: 24rpx;
+}
+.package_but{
+    width: 120rpx;
+    height: 58rpx;
+    text-align: center;
+    line-height: 58rpx;
+    font-size: 28rpx;
+    color: #F2C266;
+    border: 1rpx solid #F2C266;
+    border-radius: 30rpx;
+    position: absolute;
+    top: 30rpx;
+    right: 24rpx;
+}
+.package_selected{
+    width: 120rpx;
+    height: 58rpx;
+    text-align: center;
+    line-height: 58rpx;
+    font-size: 28rpx;
+    color: #fff;
+    border: 1rpx solid #F2C266;
+    border-radius: 30rpx;
+    position: absolute;
+    background: #E6B964;
+    top: 30rpx;
+    right: 24rpx;
+}
+.package_morry{
+    display: flex;
+    align-items: center;
+    margin-left: 24rpx;
+}
+.package_morry > image{
+    width: 44rpx;
+    height: 44rpx;
+}
+.package_morry > text{
+    display: inline-block;
+    padding-left: 10rpx;
+    font-size: 32rpx;
+    color: #333333
+}
+.package_get{
+    width: 90rpx;
+    height: 32rpx;
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+}
+.package_get > image{
+    width: 100%;
+    height: 100%;
+    display: block
+}
+.package_center{
+    margin-top: 30rpx;
+    font-size: 24rpx;
+    float: right
+}
+.package-description{
+    color: #EC82F5;
+}
+.vip-description{
+    color: #FF7A38
+}
+
+
+
+
+
+
+
+
+
+
+
+.package_text{
+    font-size: 26rpx;
+    color: #333333;
+    margin-left: 25rpx;
+}
+.package_select{
+    padding: 0 50rpx;
+}
+.package_box{
+    width: 276rpx;
+    font-family: PingFang-SC-Regular;
+    color: #999999;
+    height: 140rpx;
+    background: #EEEEEE;
+    border-radius: 15rpx;
+    float: left;
+    margin: 17rpx 25rpx;
+    text-align: center;
+    font-size: 28rpx;
+    overflow-y: hidden;
+}
+.click_package_box{
+    width: 276rpx;
+    font-family: PingFang-SC-Regular;
+    color: #fff;
+    height: 140rpx;
+    background: #EC82F5;
+    border-radius: 15rpx;
+    float: left;
+    margin: 17rpx 25rpx;
+    text-align: center;
+    font-size: 28rpx;
+    overflow-y: hidden;
+}
+.package_box > .package_off{
+    display: none;
+}
+.click_package_box > .package_off{
+    display: block;
+}
+.package_off{
+    width: 170rpx;
+    height: 33rpx;
+    border-radius: 0 0 20rpx 20rpx;
+    background: #FD754B;
+    margin: auto;
+    font-size: 22rpx;
+    line-height: 33rpx;
+    position: absolute;
+    margin-left: 55rpx;
+}
+.package_boxtext{
+    font-size: 36rpx;
+    margin-top: 1rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    margin-top: 35rpx;
+}
+.package_box image{
+    width: 38rpx;
+    height: 38rpx;
+    margin-left: 10rpx;
+}
+.click_package_box image{
+    width: 38rpx;
+    height: 38rpx;
+    margin-left: 10rpx;
+}
+.package_boxnum{
+    line-height: 54rpx
+}
+.recharge_box{
+  width: 100%;
+  padding-top: 200rpx;
+  text-align: center;
+}
+.recharge_but{
+    width: 212rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #F2C266;
+    color: #333333;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    margin-top: 200rpx;
+    margin: auto;
+    text-align: center;
+    
+}
+.recharge_bottom{
+    font-size: 24rpx;
+    text-align: center;
+    width: 100%;
+    margin-top: 20rpx;
+    color: #999999;
+}
+
+.video-button2{
+   position: fixed;
+   z-index: 999;
+   top: 55rpx;
+   left: 20rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+   color: #000;
+   font-size: 38rpx;
+   text-align: center
+}
